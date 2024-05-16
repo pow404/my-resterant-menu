@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ca8920;
+}
+
+header {
+    background: #d1d408;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu-item {
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+}
+
+.menu-item img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+}
+
