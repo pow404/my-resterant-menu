@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thai restaurant near bts">
+    <meta name="keywords" content="Thai restaurant">
+    <meta name="author" content="powpy">
+    <title>powpy Thai Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const description = document.createElement('div');
+                description.textContent = item.getAttribute('data-description');
+                description.style.position = 'absolute';
+                description.style.bottom = '100%';
+                description.style.left = '50%';
+                description.style.transform = 'translateX(-50%)';
+                description.style.background = 'white';
+                description.style.padding = '10px';
+                description.style.border = '1px solid #ccc';
+                description.style.boxShadow = '0 2px 6px rgba(0,0,0,0.1)';
+                item.appendChild(description);
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.removeChild(item.lastChild);
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to powpy Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item" data-description="A classic spicy Thai soup made with shrimp, mushrooms, and herbs.">
+            <img src="tom-yum.jpg" alt="Tom Yum Goong">
+            <p>Tom Yum Goong</p>
+        </div>
+        <div class="menu-item" data-description="A popular Thai salad made from green papaya, tomatoes, and peanuts.">
+            <img src="som-tam.jpg" alt="Som Tam">
+            <p>Som Tam</p>
+        </div>
+        <!-- Add more menu items here -->
+    </section>
+
+    <footer>
+        <p>© 2024 Luxury Thai Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
